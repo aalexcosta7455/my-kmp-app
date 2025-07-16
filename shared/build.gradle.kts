@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.XCFramework
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -9,14 +11,15 @@ kotlin {
 
     jvm("desktop")
 
+    val xcf = XCFramework()
     listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
+    ).forEach {
+        it.binaries.framework {
             baseName = "shared"
-            isStatic = true
+            xcf.add(this)
         }
     }
 
