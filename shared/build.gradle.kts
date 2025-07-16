@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.XCFramework
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 
 plugins {
     kotlin("multiplatform")
