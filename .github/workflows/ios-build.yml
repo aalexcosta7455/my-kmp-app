@@ -86,7 +86,7 @@ jobs:
       run: chmod +x ./gradlew
     
     - name: Build shared framework
-      run: ./gradlew :shared:assembleXCFramework
+      run: ./gradlew :shared:assembleSharedXCFramework
     
     - name: Install iOS dependencies
       run: |
