@@ -19,14 +19,14 @@ import org.jetbrains.compose.resources.painterResource
 @Composable
 fun App() {
     MaterialTheme {
-        var greetingText by remember { mutableStateOf("Hello, World!") }
+        var greetingText by remember { mutableStateOf("Hello, KMP!") }
         var showImage by remember { mutableStateOf(false) }
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
             Button(onClick = {
                 greetingText = "Hello, ${getPlatformName()}"
                 showImage = !showImage
             }) {
-                Text(greetingText)
+                Text("Click me!")
             }
             AnimatedVisibility(showImage) {
                 Image(
